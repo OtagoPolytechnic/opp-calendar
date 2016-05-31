@@ -6,6 +6,12 @@ __pycache__/
 # Bower
 bower_components/
 
+# npm
+node_modules/
+
+# Mac
+.DS_Store
+
 # C extensions
 *.so
 
