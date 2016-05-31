@@ -1,18 +1,36 @@
 <!DOCTYPE html>
 <html ng-app="calendar">
     <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>Calendar</title>
 
         <!-- Bootstrap -->
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
 
+        <!-- Font -->
+        <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,400italic,700,300italic,700italic' rel='stylesheet' type='text/css'>
+
         <!-- Full calendar -->
         <link type="text/css" rel="stylesheet" href="/bower_components/fullcalendar/dist/fullcalendar.min.css">
+
+        <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+        <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+        <!--[if lt IE 9]>
+          <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+          <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+        <![endif]-->
     </head>
 
     <body>
-        <div ng-controller="calendarCtrl">
-            <div ui-calendar ng-model="eventSources"></div>
+        <div class="navbar navbar-default navbar-fixed-top">
+        </div>
+
+        <div class="container">
+            <div ng-controller="calendarCtrl">
+                <div ui-calendar ng-model="eventSources"></div>
+            </div>
         </div>
 
         <!-- Load our scripts -->
@@ -23,6 +41,6 @@
         <script type="text/javascript" src="/bower_components/fullcalendar/dist/fullcalendar.js"></script>
         <script type="text/javascript" src="/bower_components/angular-route/angular-route.js"></script>
         <script type="text/javascript" src="/bower_components/angular-bootstrap/ui-bootstrap.js"></script>
-        <script type="text/javascript" src="/frontend/js/calendar.js"></script>
+        <script type="text/javascript" src="/js/calendar.js"></script>
     </body>
 </html>

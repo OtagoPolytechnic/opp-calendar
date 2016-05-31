@@ -1,0 +1,43 @@
+.dropdown {
+    &-menu {
+        padding: 0;
+        margin-top: 0;
+        font-size: $font-size-small;
+
+        > li > a {
+            padding: 12px 15px;
+        }
+    }
+
+    &-header {
+        padding-left: 15px;
+        padding-right: 15px;
+        font-size: 9px;
+        text-transform: uppercase;
+    }
+}
+
+.popover {
+    color: #fff;
+    font-size: 12px;
+    font-weight: 300;
+}
+
+.panel {
+    &-heading, &-footer {
+        border-top-right-radius: 0;
+        border-top-left-radius: 0;
+    }
+
+    &-default {
+        .close {
+            color: $text-color;
+        }
+    }
+}
+
+.modal {
+    .close {
+        color: $text-color;
+    }
+}

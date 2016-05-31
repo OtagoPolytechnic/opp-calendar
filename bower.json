@@ -21,5 +21,8 @@
   "resolutions": {
     "angular": "1.5.5",
     "fullcalendar": "^2.7.2"
+  },
+  "devDependencies": {
+    "bootstrap-sass": "^3.3.6"
   }
 }

@@ -1,0 +1,74 @@
+.nav {
+    .open > a, .open > a:hover, .open > a:focus {
+        border-color: transparent;
+    }
+}
+
+.nav-tabs {
+    > li > a {
+        background-color: $btn-default-bg;
+        color: $text-color;
+    }
+
+    .caret {
+        border-top-color: $text-color;
+        border-bottom-color: $text-color;
+    }
+}
+
+.nav-pills {
+    font-weight: 300;
+}
+
+.breadcrumb {
+    border: 1px solid $table-border-color;
+    border-radius: 3px;
+    font-size: 10px;
+    font-weight: 300;
+    text-transform: uppercase;
+}
+
+.pagination {
+    font-size: $font-size-small;
+    font-weight: 300;
+    color: $gray-light;
+
+    > li {
+        > a, > span {
+            margin-left: 4px;
+            color: $gray-light;
+        }
+    }
+
+    > .active {
+        > a, > span {
+            color: #fff;
+        }
+    }
+
+    > li, > li:first-child, > li:last-child {
+        > a, > span {
+            border-radius: 3px;
+        }
+    }
+
+    &-lg > li > a, &-lg > li > span {
+        padding-left: 22px;
+        padding-right: 22px;
+    }
+
+    &-sm > li > a, &-sm > li > span {
+       padding: 0 5px;
+    }
+}
+
+.pager {
+    font-size: $font-size-small;
+    font-weight: 300;
+    color: $gray-light;
+}
+
+.list-group {
+    font-size: $font-size-small;
+    font-weight: 300;
+}

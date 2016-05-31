@@ -1,0 +1,8 @@
+label, .control-label, .help-block, .checkbox, .radio {
+    font-size: $font-size-small;
+    font-weight: normal;
+}
+
+input[type="radio"], input[type="checkbox"] {
+    margin-top: 1px;
+}
