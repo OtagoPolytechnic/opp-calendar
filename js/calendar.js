@@ -1,16 +1,16 @@
-var calendar = angular.module('calendar', ['ui.calendar']);
+var calendar = angular.module('calendar', ['ui.calendar', 'angularMoment']);
 
 calendar.controller('calendarCtrl', ['$scope', function($scope) {
-    $scope.eventSources = [
-      {
-        title: 'Draggable event',
-        type: 'warning',
-        //startsAt: moment().startOf('month').toDate()
-      },
-      {
-        title: 'Non-draggable event',
-        type: 'info',
-        //startsAt: moment().startOf('month').add(1, 'day').toDate()
-      }
-    ];
+    $scope.events = [];
+    //     {
+    //         title: 'OOSD',
+    //         start: new Date(y, m, d - 5),
+    //         end: new Date(y, m, d - 2)
+    //     },
+    //     {
+    //         title: 'Mobile',
+    //         start: new Date(y, m, d - 5),
+    //         end: new Date(y, m, d - 2)
+    //     }
+    // ];
 }]);
