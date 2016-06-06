@@ -12,7 +12,7 @@ calendar.controller('calendarCtrl', ['$scope', function($scope) {
             height: 600,
             editable: true,
             header:{
-                left: 'month basicWeek basicDay',
+                left: 'month agendaWeek agendaDay',
                 center: 'title',
                 right: 'today prev,next'
             },
