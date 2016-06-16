@@ -6,19 +6,39 @@ calendar.controller('calendarCtrl', ['$scope', function($scope) {
     var m = date.getMonth();
     var y = date.getFullYear();
 
+    // API key for Google calendar
+    // If you need this, contact Paddy Moran
+    const googleApiKey = '';
+
+
+    $scope.alertOnDayClick = function(date,allDay,jsEvent, view) {
+        alert('day');
+    };
+
+    $scope.eventClick = function(event) {
+        alert('event');
+    }
+
+    /* alert on Resize */
+    $scope.alertOnResize = function(event, delta, revertFunc, jsEvent, ui, view ){
+        alert('Event Resized to make dayDelta ' + delta);
+    };
+
     /* config object */
     $scope.uiConfig = {
+        editable: true,
         calendar:{
             height: 600,
             editable: true,
             header:{
-                left: 'month agendaWeek agendaDay',
+                left: 'today prev,next',
                 center: 'title',
-                right: 'today prev,next'
-            },
-            dayClick: $scope.alertEventOnClick,
-            eventDrop: $scope.alertOnDrop,
-            eventResize: $scope.alertOnResize
+                right: 'month agendaWeek agendaDay'
+            }
+        },
+        eventResize: $scope.alertOnResize,
+        select: function() {
+            alert('hi');
         }
     };
 
@@ -67,10 +87,21 @@ calendar.controller('calendarCtrl', ['$scope', function($scope) {
 
     /* event source that pulls from google.com */
     $scope.googleEvents = {
-            url: "http://www.google.com/calendar/feeds/usa__en%40holiday.calendar.google.com/public/basic",
-            className: 'gcal-event',           // an option!
-            currentTimezone: 'America/Chicago' // an option!
+        url: 'j92l0avbj27103mm7n6o5fpe2g@group.calendar.google.com',
+        className: 'gcal-event',
+        googleCalendarApiKey: googleApiKey
     };
 
-    $scope.eventSources = [$scope.events, $scope.googleEvents];
+    /* Public holidays */
+    $scope.publicHolidays =  {
+        googleCalendarId: 'en.new_zealand#holiday@group.v.calendar.google.com',
+        className: 'public-holiday',
+        googleCalendarApiKey: googleApiKey
+    }
+
+    $scope.eventSources = [
+        $scope.events,
+        $scope.googleEvents,
+        $scope.publicHolidays
+    ];
 }]);

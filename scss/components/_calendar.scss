@@ -1,0 +1,26 @@
+.gcal-event {
+    background: #9C0D38;
+}
+
+.public-holiday {
+    background: #048A81;
+}
+
+.fc-event-container .fc-event {
+    box-shadow: 0 0 1px rgba(50, 50, 50, .4) inset;
+    border-radius: 0;
+    border: none;
+    text-shadow: 0 0 2px rgba(50, 50, 50, .4);
+    height: 20px;
+    line-height: 20px;
+    vertical-align: middle;
+    text-align: center;
+}
+
+.fc-button {
+    border-radius: 0 !important;
+}
+
+.fc .fc-toolbar > * > * {
+    margin-left: 0;
+}

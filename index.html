@@ -73,9 +73,8 @@
             <!-- Page content
             ================================================== -->
             <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
-                <h1 class="page-header">Calendar</h1>
-
                 <div ng-controller="calendarCtrl">
+                    <h1 class="page-header">Calendar {{ alertMessage }}</h1>
                     <div ui-calendar="uiConfig.calendar" ng-model="eventSources"></div>
                 </div>
             </div>
@@ -89,10 +88,14 @@
     <script type="text/javascript" src="/bower_components/angular/angular.js"></script>
     <script type="text/javascript" src="/bower_components/angular-moment/angular-moment.js"></script>
     <script type="text/javascript" src="/bower_components/angular-ui-calendar/src/calendar.js"></script>
-    <script type="text/javascript" src="/bower_components/fullcalendar/dist/fullcalendar.js"></script>
-    <script type="text/javascript" src="/bower_components/fullcalendar/dist/gcal.js"></script>
     <script type="text/javascript" src="/bower_components/angular-route/angular-route.js"></script>
     <script type="text/javascript" src="/bower_components/angular-bootstrap/ui-bootstrap.js"></script>
+
+    <!-- Full Calendar -->
+    <script type="text/javascript" src="/bower_components/fullcalendar/dist/fullcalendar.js"></script>
+    <script type="text/javascript" src="/bower_components/fullcalendar/dist/gcal.js"></script>
+
+    <!-- Custom scripts -->
     <script type="text/javascript" src="/js/calendar.js"></script>
 </body>
 </html>
